@@ -81,8 +81,8 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 pb-16 md:pb-24 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div
             variants={containerVariants}
@@ -94,7 +94,13 @@ export default function Hero() {
               variants={itemVariants}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6"
             >
-              <span className="text-xl">🐾</span>
+              <svg
+                className="w-5 h-5 text-white"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M8.5 3C7.67 3 7 3.67 7 4.5S7.67 6 8.5 6 10 5.33 10 4.5 9.33 3 8.5 3zm7 0C14.67 3 14 3.67 14 4.5S14.67 6 15.5 6 17 5.33 17 4.5 16.33 3 15.5 3zM5 7.5C4.17 7.5 3.5 8.17 3.5 9s.67 1.5 1.5 1.5S6.5 9.83 6.5 9 5.83 7.5 5 7.5zm14 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-7 3c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
+              </svg>
               <span className="text-sm font-medium">
                 Chennai's Trusted Pet Care
               </span>
@@ -102,14 +108,14 @@ export default function Hero() {
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight"
             >
               Expert Care for Your Beloved Pets
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed"
+              className="text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed"
             >
               Dr. Vairamuthu and team provide compassionate, specialist
               veterinary care in Perambur, Chennai.
@@ -117,19 +123,19 @@ export default function Hero() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 mb-6 md:mb-8"
             >
               <a
                 href="https://wa.me/919600103135?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20my%20pet"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#F4A940] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#e09830] transition-all hover:scale-105 shadow-lg"
+                className="w-full sm:w-auto bg-[#F4A940] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#e09830] transition-all hover:scale-105 shadow-lg text-center"
               >
                 Book Appointment
               </a>
               <a
                 href="tel:+919600103135"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#0D6E6E] transition-all"
+                className="w-full sm:w-auto border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-[#0D6E6E] transition-all text-center"
               >
                 Call Now: 96001 03135
               </a>
@@ -137,7 +143,7 @@ export default function Hero() {
 
             <motion.div
               variants={itemVariants}
-              className="flex items-center gap-2 text-white/90"
+              className="flex flex-wrap items-center gap-2 text-white/90 text-sm md:text-base"
             >
               <div className="flex text-[#F4A940]">
                 {[...Array(5)].map((_, i) => (
@@ -147,8 +153,9 @@ export default function Hero() {
                 ))}
               </div>
               <span className="font-semibold">4.5</span>
-              <span>· 280+ Reviews</span>
-              <span className="text-xs bg-white/20 px-2 py-1 rounded">
+              <span className="text-white/70">·</span>
+              <span>280+ Reviews</span>
+              <span className="text-xs bg-white/20 px-2 py-0.5 rounded">
                 Google verified
               </span>
             </motion.div>

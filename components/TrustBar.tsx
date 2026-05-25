@@ -46,15 +46,13 @@ function AnimatedStat({ icon, value, label, delay }: StatProps) {
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay }}
-      className="flex items-center gap-3 text-white"
+      className="flex flex-col items-center text-center text-white"
     >
-      <span className="text-4xl">{icon}</span>
-      <div>
-        <div className="text-2xl md:text-3xl font-bold">
-          {isDecimal ? value : `${count}${hasPlus ? "+" : ""}`}
-        </div>
-        <div className="text-sm md:text-base opacity-90">{label}</div>
+      <span className="text-3xl md:text-4xl mb-2">{icon}</span>
+      <div className="text-xl md:text-2xl font-bold mb-1">
+        {isDecimal ? value : `${count}${hasPlus ? "+" : ""}`}
       </div>
+      <div className="text-xs md:text-sm opacity-90">{label}</div>
     </motion.div>
   );
 }
@@ -68,9 +66,9 @@ export default function TrustBar() {
   ];
 
   return (
-    <section className="bg-[#0D6E6E] py-12">
+    <section className="bg-[#0D6E6E] py-8 md:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <AnimatedStat
               key={index}

@@ -16,9 +16,9 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="about" ref={ref} className="py-20 bg-white">
+    <section id="about" ref={ref} className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

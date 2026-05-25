@@ -10,7 +10,7 @@ export default function CTABanner() {
   return (
     <section
       ref={ref}
-      className="relative py-20 bg-gradient-to-r from-[#0D6E6E] to-[#F4A940] overflow-hidden"
+      className="relative py-12 md:py-20 bg-gradient-to-r from-[#0D6E6E] to-[#F4A940] overflow-hidden"
     >
       {/* Animated paw print pattern background */}
       <div className="absolute inset-0 opacity-10">

@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-gradient-to-br from-[#0a5555] to-[#0D6E6E] overflow-hidden pt-20"
+      className="relative min-h-0 md:min-h-screen bg-gradient-to-br from-[#0a5555] to-[#0D6E6E] overflow-hidden pt-20"
     >
       {/* Floating paw prints background decoration */}
       <div className="absolute inset-0 opacity-5">
@@ -81,7 +81,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-12 md:pb-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-12 pb-8 md:pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div

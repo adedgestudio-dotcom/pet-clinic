@@ -128,7 +128,7 @@ export default function CTABanner() {
             <motion.a
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
-              href="https://wa.me/917810003194"
+              href="https://wa.me/919444182357"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative w-full sm:flex-1 bg-[#25D366] text-white rounded-2xl font-semibold overflow-hidden shadow-2xl hover:shadow-3xl transition-all"

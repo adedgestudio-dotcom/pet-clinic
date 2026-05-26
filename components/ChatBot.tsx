@@ -8,7 +8,7 @@ export default function ChatBot() {
 
   const handleWhatsAppClick = () => {
     window.open(
-      "https://wa.me/917810003194?text=Hello%2C%20I%20need%20help%20with%20my%20pet",
+      "https://wa.me/919444182357?text=Hello%2C%20I%20need%20help%20with%20my%20pet",
       "_blank"
     );
   };

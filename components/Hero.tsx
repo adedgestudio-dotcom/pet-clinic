@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-0 md:min-h-screen bg-gradient-to-br from-[#0a5555] to-[#0D6E6E] overflow-hidden pt-20"
+      className="relative min-h-0 md:min-h-screen bg-gradient-to-br from-[#0a5555] to-[#0D6E6E] overflow-hidden pt-20 w-full"
     >
       {/* Floating paw prints background decoration */}
       <div className="absolute inset-0 opacity-5">

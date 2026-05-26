@@ -11,7 +11,7 @@ import ChatBot from "@/components/ChatBot";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F9F7F4]">
+    <main className="min-h-screen bg-[#F9F7F4] overflow-x-hidden max-w-full">
       <Navbar />
       <Hero />
       <TrustBar />

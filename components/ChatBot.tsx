@@ -215,7 +215,7 @@ export default function ChatBot() {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 group"
+        className="fixed bottom-6 right-6 z-50 group"
       >
         {/* Pulse rings */}
         {!isOpen && (

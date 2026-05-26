@@ -81,7 +81,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 pb-16 md:pb-24 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 pb-12 md:pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left side - Text content */}
           <motion.div

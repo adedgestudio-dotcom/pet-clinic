@@ -35,9 +35,9 @@ export default function ChatBot() {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="fixed bottom-20 left-4 right-4 md:bottom-24 md:left-auto md:right-6 z-50 md:w-[340px] md:max-w-[340px]"
             >
-              <div className="bg-gradient-to-br from-white to-[#F9F7F4] rounded-xl md:rounded-2xl shadow-2xl overflow-hidden border border-[#0D6E6E]/10">
+              <div className="bg-linear-to-br from-white to-[#F9F7F4] rounded-xl md:rounded-2xl shadow-2xl overflow-hidden border border-[#0D6E6E]/10">
                 {/* Header */}
-                <div className="bg-gradient-to-r from-[#0D6E6E] to-[#0a5555] p-3 md:p-4 relative overflow-hidden">
+                <div className="bg-linear-to-r from-[#0D6E6E] to-[#0a5555] p-3 md:p-4 relative overflow-hidden">
                   <div className="absolute top-1 right-1 text-white/10 text-3xl">
                     🐾
                   </div>
@@ -46,17 +46,9 @@ export default function ChatBot() {
                   </div>
 
                   <div className="relative flex items-center gap-2 md:gap-3">
-                    <motion.div
-                      animate={{ rotate: [0, 10, -10, 0] }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                      className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg md:rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-lg flex-shrink-0"
-                    >
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-white rounded-lg md:rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-lg shrink-0">
                       🐕
-                    </motion.div>
+                    </div>
                     <div className="flex-1 min-w-0">
                       <div className="font-bold text-white text-sm md:text-base truncate">
                         Pet Care Assistant
@@ -68,7 +60,7 @@ export default function ChatBot() {
                     </div>
                     <button
                       onClick={() => setIsOpen(false)}
-                      className="w-7 h-7 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors flex-shrink-0"
+                      className="w-7 h-7 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-colors shrink-0"
                     >
                       ✕
                     </button>
@@ -84,11 +76,11 @@ export default function ChatBot() {
                     transition={{ delay: 0.2 }}
                     className="flex gap-2"
                   >
-                    <div className="w-7 h-7 bg-[#F4A940] rounded-full flex items-center justify-center text-sm flex-shrink-0">
+                    <div className="w-7 h-7 bg-[#F4A940] rounded-full flex items-center justify-center text-sm shrink-0">
                       🐾
                     </div>
                     <div className="flex-1">
-                      <div className="bg-gradient-to-br from-[#0D6E6E]/10 to-[#0D6E6E]/5 rounded-xl rounded-tl-sm p-3">
+                      <div className="bg-linear-to-br from-[#0D6E6E]/10 to-[#0D6E6E]/5 rounded-xl rounded-tl-sm p-3">
                         <p className="text-[#1C1C1E] text-xs md:text-sm leading-relaxed">
                           Hi there! 👋 Need help with your furry friend?
                         </p>
@@ -111,13 +103,11 @@ export default function ChatBot() {
                     </div>
 
                     {/* WhatsApp Button */}
-                    <motion.button
-                      whileHover={{ scale: 1.02, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
+                    <button
                       onClick={handleWhatsAppClick}
-                      className="w-full bg-gradient-to-r from-[#25D366] to-[#20bd5a] text-white px-3 py-2.5 md:py-3 rounded-lg md:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2 group text-xs md:text-sm"
+                      className="w-full bg-linear-to-r from-[#25D366] to-[#20bd5a] text-white px-3 py-2.5 md:py-3 rounded-lg md:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-[shadow,transform] duration-200 hover:scale-[1.02] hover:-translate-y-0.5 flex items-center gap-2 group text-xs md:text-sm will-change-transform"
                     >
-                      <div className="w-8 h-8 md:w-9 md:h-9 bg-white/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                      <div className="w-8 h-8 md:w-9 md:h-9 bg-white/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shrink-0">
                         <svg
                           className="w-4 h-4 md:w-5 md:h-5"
                           fill="currentColor"
@@ -135,7 +125,7 @@ export default function ChatBot() {
                         </div>
                       </div>
                       <svg
-                        className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0"
+                        className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200 shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -147,16 +137,14 @@ export default function ChatBot() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </motion.button>
+                    </button>
 
                     {/* Call Button */}
-                    <motion.a
-                      whileHover={{ scale: 1.02, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
+                    <a
                       href="tel:+919600103135"
-                      className="w-full bg-gradient-to-r from-[#0D6E6E] to-[#0a5555] text-white px-3 py-2.5 md:py-3 rounded-lg md:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center gap-2 group text-xs md:text-sm"
+                      className="w-full bg-linear-to-r from-[#0D6E6E] to-[#0a5555] text-white px-3 py-2.5 md:py-3 rounded-lg md:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-[shadow,transform] duration-200 hover:scale-[1.02] hover:-translate-y-0.5 flex items-center gap-2 group text-xs md:text-sm will-change-transform"
                     >
-                      <div className="w-8 h-8 md:w-9 md:h-9 bg-white/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                      <div className="w-8 h-8 md:w-9 md:h-9 bg-white/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200 shrink-0">
                         <svg
                           className="w-4 h-4 md:w-5 md:h-5"
                           fill="none"
@@ -178,7 +166,7 @@ export default function ChatBot() {
                         </div>
                       </div>
                       <svg
-                        className="w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0"
+                        className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200 shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -190,7 +178,7 @@ export default function ChatBot() {
                           d="M9 5l7 7-7 7"
                         />
                       </svg>
-                    </motion.a>
+                    </a>
                   </motion.div>
 
                   {/* Footer */}
@@ -211,46 +199,28 @@ export default function ChatBot() {
       </AnimatePresence>
 
       {/* Floating Button */}
-      <motion.button
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 z-50 group"
+        className="fixed bottom-6 right-6 z-50 group transition-transform duration-200 hover:scale-110 active:scale-90 will-change-transform"
       >
         {/* Pulse rings */}
         {!isOpen && (
           <>
-            <motion.div
-              animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute inset-0 bg-[#0D6E6E] rounded-full"
-            />
-            <motion.div
-              animate={{ scale: [1, 1.8, 1], opacity: [0.3, 0, 0.3] }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 0.5,
-              }}
-              className="absolute inset-0 bg-[#F4A940] rounded-full"
+            <div className="absolute inset-0 bg-[#0D6E6E] rounded-full animate-ping opacity-50" />
+            <div
+              className="absolute inset-0 bg-[#F4A940] rounded-full animate-ping opacity-30"
+              style={{ animationDelay: "0.5s" }}
             />
           </>
         )}
 
         {/* Main button */}
-        <div className="relative w-14 h-14 md:w-16 md:h-16 bg-gradient-to-br from-[#0D6E6E] to-[#0a5555] rounded-full shadow-2xl flex items-center justify-center overflow-hidden">
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 bg-gradient-to-r from-[#F4A940]/20 via-transparent to-[#F4A940]/20"
-          />
-
+        <div className="relative w-14 h-14 md:w-16 md:h-16 bg-linear-to-br from-[#0D6E6E] to-[#0a5555] rounded-full shadow-2xl flex items-center justify-center overflow-hidden">
           {/* Icon */}
-          <motion.div
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ type: "spring", damping: 15 }}
-            className="relative"
+          <div
+            className={`relative transition-transform duration-300 ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
           >
             {isOpen ? (
               <svg
@@ -275,32 +245,24 @@ export default function ChatBot() {
                 <path d="M8.5 3C7.67 3 7 3.67 7 4.5S7.67 6 8.5 6 10 5.33 10 4.5 9.33 3 8.5 3zm7 0C14.67 3 14 3.67 14 4.5S14.67 6 15.5 6 17 5.33 17 4.5 16.33 3 15.5 3zM5 7.5C4.17 7.5 3.5 8.17 3.5 9s.67 1.5 1.5 1.5S6.5 9.83 6.5 9 5.83 7.5 5 7.5zm14 0c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5zm-7 3c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
               </svg>
             )}
-          </motion.div>
+          </div>
 
           {/* Notification badge */}
           {!isOpen && (
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute -top-1 -right-1 w-4 h-4 md:w-5 md:h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] md:text-xs font-bold shadow-lg"
-            >
+            <div className="absolute -top-1 -right-1 w-4 h-4 md:w-5 md:h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-[10px] md:text-xs font-bold shadow-lg">
               1
-            </motion.div>
+            </div>
           )}
         </div>
 
         {/* Tooltip */}
         {!isOpen && (
-          <motion.div
-            initial={{ opacity: 0, x: 10 }}
-            whileHover={{ opacity: 1, x: 0 }}
-            className="hidden md:block absolute right-20 top-1/2 -translate-y-1/2 bg-[#1C1C1E] text-white px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap shadow-xl pointer-events-none"
-          >
+          <div className="hidden md:group-hover:block absolute right-20 top-1/2 -translate-y-1/2 bg-[#1C1C1E] text-white px-3 py-2 rounded-lg text-xs font-medium whitespace-nowrap shadow-xl pointer-events-none">
             Need help? Chat with us!
             <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rotate-45 w-2 h-2 bg-[#1C1C1E]"></div>
-          </motion.div>
+          </div>
         )}
-      </motion.button>
+      </button>
     </>
   );
 }
